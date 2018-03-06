@@ -24,6 +24,7 @@ class RevenueCalculatorTest {
     @Test
     void calculateRevenueArithmeticException() {
         assertThrows(ArithmeticException.class, ()-> RevenueCalculator.calculateRevenue(BigDecimal.valueOf(1.0), BigDecimal.valueOf(400)));
+        assertThrows(ArithmeticException.class, ()-> RevenueCalculator.calculateRevenue(BigDecimal.valueOf(2.0), BigDecimal.valueOf(400)));
         assertThrows(ArithmeticException.class, ()-> RevenueCalculator.calculateRevenue(BigDecimal.valueOf(0.2), BigDecimal.valueOf(-400)));
     }
 }
